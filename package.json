@@ -24,7 +24,7 @@
     "@radix-ui/react-dialog": "^1.1.14",
     "zod": "^3.25.42",
     "gray-matter": "^4.0.3",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "reading-time": "^1.5.0"
   },
   "devDependencies": {
