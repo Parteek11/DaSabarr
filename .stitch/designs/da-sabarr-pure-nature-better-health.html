@@ -1,0 +1,540 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Da Sabarr | Pure Nature. Better Health.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-surface": "#30312f",
+                "error": "#ba1a1a",
+                "background": "#fbf9f6",
+                "on-error-container": "#93000a",
+                "inverse-primary": "#b4cdb8",
+                "error-container": "#ffdad6",
+                "on-secondary-fixed": "#241a0e",
+                "primary": "#061b0e",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-highest": "#e3e2e0",
+                "on-tertiary-fixed": "#1b1c19",
+                "on-background": "#1b1c1a",
+                "on-secondary": "#ffffff",
+                "on-primary-fixed": "#0b2013",
+                "tertiary": "#171815",
+                "primary-container": "#1b3022",
+                "primary-fixed": "#d0e9d4",
+                "tertiary-container": "#2b2c29",
+                "on-primary": "#ffffff",
+                "secondary": "#6b5c4c",
+                "surface-variant": "#e3e2e0",
+                "on-tertiary": "#ffffff",
+                "surface-tint": "#4d6453",
+                "on-secondary-container": "#716252",
+                "on-tertiary-container": "#94938f",
+                "secondary-container": "#f4dfcb",
+                "on-primary-fixed-variant": "#364c3c",
+                "outline-variant": "#c3c8c1",
+                "primary-fixed-dim": "#b4cdb8",
+                "surface-container-low": "#f5f3f0",
+                "surface-container": "#efeeeb",
+                "secondary-fixed-dim": "#d7c3b0",
+                "on-tertiary-fixed-variant": "#474744",
+                "on-surface-variant": "#434843",
+                "on-secondary-fixed-variant": "#524436",
+                "on-primary-container": "#819986",
+                "tertiary-fixed": "#e4e2dd",
+                "on-error": "#ffffff",
+                "surface-container-high": "#e9e8e5",
+                "surface": "#fbf9f6",
+                "surface-bright": "#fbf9f6",
+                "secondary-fixed": "#f4dfcb",
+                "on-surface": "#1b1c1a",
+                "inverse-on-surface": "#f2f1ee",
+                "surface-dim": "#dbdad7",
+                "outline": "#737973",
+                "tertiary-fixed-dim": "#c8c6c2"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "unit": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "section-gap": "120px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                "body-lg": ["Inter"],
+                "display-lg": ["Playfair Display"],
+                "headline-lg": ["Playfair Display"],
+                "body-md": ["Inter"],
+                "display-lg-mobile": ["Playfair Display"],
+                "headline-md": ["Playfair Display"],
+                "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .tonal-card { transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tonal-card:hover { transform: translateY(-8px); box-shadow: 0 32px 64px -12px rgba(6, 27, 14, 0.08); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="flex items-center gap-3 active:scale-95 transition-transform duration-200" href="#">
+<img alt="Da Sabarr Logo" class="h-10 md:h-12 w-auto" src="data:image/png;base64,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">
+<span class="font-display-lg text-headline-md tracking-tight text-primary">Da Sabarr</span>
+</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#home">Home</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#products">Products</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#certifications">Certifications</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<a class="hidden md:block bg-primary text-on-primary px-6 py-2.5 rounded-lg font-medium hover:bg-primary/90 active:scale-95 transition-all duration-300" href="#contact">
+                Contact Us
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<img alt="Da Sabarr Hero Banner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBngRnUBQr49NqkeWUx88NLr4AkdnEuuTccrCEYBL3jfBDzQh4oIQCtY87W8f4fTUYeOb36m85KEEKGOYq2IpERAzt0ySiNsENLbCq5qKAOnVV1WukP1hcbWQ6VsF7klbcBEZhpabRrKSCWugQVa9xSAyC0dypG5JCdPZYKPrEJddUsUAOxXRtTqn0Fkbtub97-XeJVOKxBXYagvHQkEiYM65lz7r7YiuBCiCkNjgpOVoo0QKsM4kSBRnuxRLXqZSxRhbucqxsQzw">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl text-white">
+<span class="font-label-caps text-label-caps uppercase tracking-widest mb-4 block">Indigenous Wellness Wisdom</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">
+                        Pure Nature. <br>Better Health.
+                    </h1>
+<p class="font-body-lg text-body-lg mb-10 text-white/90 max-w-lg">
+                        Premium organic and natural products crafted to support a healthier lifestyle. Discover the raw purity of West African superfoods.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-primary-fixed transition-colors text-center active:scale-95" href="#products">
+                            View Products
+                        </a>
+<a class="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all text-center active:scale-95" href="#contact">
+                            Contact Us
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="about">
+<div class="grid md:grid-cols-2 gap-16 items-center">
+<div class="reveal active">
+<span class="font-label-caps text-label-caps text-primary/60 uppercase tracking-[0.2em] mb-4 block">Our Story</span>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary mb-8">About Da Sabarr</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed mb-8">
+                        Da Sabarr is dedicated to providing high-quality organic, natural, and health-focused products. We believe in the power of nature and sustainable sourcing to deliver products that promote wellness, nutrition, and healthy living. Our commitment is to purity, quality, transparency, and customer trust.
+                    </p>
+<div class="grid grid-cols-2 gap-8 mt-12">
+<div>
+<h4 class="font-bold text-primary mb-2">Our Mission</h4>
+<p class="text-on-surface-variant text-sm">Empowering global wellness through natural, raw superfoods.</p>
+</div>
+<div>
+<h4 class="font-bold text-primary mb-2">Our Vision</h4>
+<p class="text-on-surface-variant text-sm">To be the bridge between indigenous wisdom and modern health.</p>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 reveal active">
+<div class="bg-surface-container p-8 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">eco</span>
+<p class="font-bold text-primary">Natural Ingredients</p>
+</div>
+<div class="bg-primary-fixed p-8 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">verified</span>
+<p class="font-bold text-primary">Quality Assurance</p>
+</div>
+<div class="bg-secondary-container p-8 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">compost</span>
+<p class="font-bold text-secondary">Sustainable</p>
+</div>
+<div class="bg-surface-container-highest p-8 rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">favorite</span>
+<p class="font-bold text-primary">Core Values</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary">Why Choose Us</h2>
+<div class="h-1 w-20 bg-primary mx-auto mt-6"></div>
+</div>
+<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Cards -->
+<div class="tonal-card bg-white p-10 rounded-xl reveal active">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">psychology</span>
+<h3 class="font-headline-md text-primary mb-4">100% Natural</h3>
+<p class="text-on-surface-variant">Pure, unadulterated ingredients directly from the source with zero fillers or synthetics.</p>
+</div>
+<div class="tonal-card bg-white p-10 rounded-xl reveal active" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">forest</span>
+<h3 class="font-headline-md text-primary mb-4">Organic Sourcing</h3>
+<p class="text-on-surface-variant">We partner with local farmers who employ traditional, chemical-free cultivation methods.</p>
+</div>
+<div class="tonal-card bg-white p-10 rounded-xl reveal active" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">biotech</span>
+<h3 class="font-headline-md text-primary mb-4">Quality Tested</h3>
+<p class="text-on-surface-variant">Rigorous lab testing ensures every batch meets our uncompromising safety standards.</p>
+</div>
+<div class="tonal-card bg-white p-10 rounded-xl reveal active">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">block</span>
+<h3 class="font-headline-md text-primary mb-4">No Harmful Additives</h3>
+<p class="text-on-surface-variant">Free from preservatives, artificial colors, and genetically modified organisms.</p>
+</div>
+<div class="tonal-card bg-white p-10 rounded-xl reveal active" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">spa</span>
+<h3 class="font-headline-md text-primary mb-4">Wellness Focused</h3>
+<p class="text-on-surface-variant">Products designed specifically to align with a holistically healthy and balanced lifestyle.</p>
+</div>
+<div class="tonal-card bg-white p-10 rounded-xl reveal active" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-primary-container text-4xl mb-6">groups</span>
+<h3 class="font-headline-md text-primary mb-4">Trusted by Customers</h3>
+<p class="text-on-surface-variant">A growing community of wellness enthusiasts relies on us for their daily nutrition.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="products">
+<div class="text-center mb-16 reveal active">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-widest mb-2 block">Our Signature Blends</span>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary">Featured Products</h2>
+</div>
+<div class="grid lg:grid-cols-2 gap-12">
+<!-- Beetroot -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 reveal active">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="Organic Beetroot Powder" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A premium glass jar of vibrant deep red beetroot powder sitting on a textured stone surface. The lighting is soft and natural, emphasizing the fine texture of the organic superfood powder. Fresh beet slices are scattered around the jar, creating a raw and authentic culinary atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9H3dTHVv2AbeFqmbHTdWUbHvxtrGupWxOIkT4n3buhvHIMrfTKf5vBZ_ZvvCj_7k9en9TfdqArTUurorQkMCSjxHzqvASTXi6vwGHM3oKvENyg7J6Ph3emy_4Ns8iaPJikefTxYEItVcAfPZggmERT4qxafGI60y67uXYCV5ypb0hyCd8_dGgD8g1lV0Ex8RB3aVOUgUB8w5xeHJ5aUv3t_KtFr_pQmX4EByB4e87zZhSbH1cyI-dhAcy05HStFiC3Ucim8-ryg">
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="font-label-caps text-xs text-primary/50 uppercase mb-2">Antioxidant Rich</span>
+<h3 class="font-headline-lg text-primary mb-4">Organic Beetroot Powder</h3>
+<p class="text-on-surface-variant mb-6">Rich in antioxidants, supports stamina and wellness. A natural source of essential nutrients.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Boosts Nitric Oxide</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Natural Detoxifier</li>
+</ul>
+<button class="w-fit border-b-2 border-primary text-primary font-bold py-1 hover:pb-2 transition-all">Learn More</button>
+</div>
+</div>
+<!-- Moringa -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 reveal active">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="Moringa Powder" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A minimalist studio photograph of a glass container filled with vibrant green moringa leaf powder. The jar has a clean white label and sits on a warm earthy ceramic plate alongside fresh moringa leaves. The aesthetic is clean, modern, and clinical yet natural, with soft shadows and high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiOn8r8btl4TR8S_C-a6yW88fBlZu2kYHKJOy2s_VH3vdwtAhCUO2Wq5U9RrRHHmVpphrTqsELljPrtfUdBMC3TRmVpHnHMSdW0_KSzcDDhg47EuGBV1uwGY5TYYGwaVXRA6Jf5jthzDF8G7IA56P8RyNcchYj_UMxRiB0BRb0Hu0hBh9NvljPCQq6jL8jiiUkQnb4LdOmKfWHFGGj5VqXzBv_8LDEuZvPLJwJ_w1EiguipMUqo107hDyP_qCCK-CvNPzIyY2g2w">
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="font-label-caps text-xs text-primary/50 uppercase mb-2">Superfood Essential</span>
+<h3 class="font-headline-lg text-primary mb-4">Moringa Powder</h3>
+<p class="text-on-surface-variant mb-6">Nutrient-rich superfood that supports immunity. Dense with essential vitamins and minerals.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Immune System Support</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> High in Vitamin A &amp; C</li>
+</ul>
+<button class="w-fit border-b-2 border-primary text-primary font-bold py-1 hover:pb-2 transition-all">Learn More</button>
+</div>
+</div>
+<!-- Turmeric -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 reveal active">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="Turmeric Powder" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="An editorial style image of golden turmeric powder in a clear glass jar. The powder's rich yellow-orange hue is the focal point, surrounded by raw turmeric roots on a neutral beige background. The lighting is crisp and detailed, showcasing the fine grain of the powder and the organic texture of the roots." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC61IYdyiTTKwy9rUWPQiTdTKo6cWJ7Pd6dVPR7Z-VK5I1nTO_hqADqS6rGivR3K60nmBi3v-kjrL0BUxcE2FxUloCMVq7pVxmb0HjZ1VSMBKci7BWr6fAst_aTd9gORsvoRm-awwnIOI1ip1aukxuVewk648U5SUd8K1QK__wU2wc70AsuECQEUNrjzFlDMzNg0IN6mJRDp8cUrIgaDPTVxN2XguieRUiRE7TavUiw98nmL6YPtLf4hIRGF-ForevzDpbQ4AhqIg">
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="font-label-caps text-xs text-primary/50 uppercase mb-2">Anti-Inflammatory</span>
+<h3 class="font-headline-lg text-primary mb-4">Turmeric Powder</h3>
+<p class="text-on-surface-variant mb-6">Natural antioxidant that supports overall wellness with time-tested traditional health benefits.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Joint Health Support</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Digestive Wellness</li>
+</ul>
+<button class="w-fit border-b-2 border-primary text-primary font-bold py-1 hover:pb-2 transition-all">Learn More</button>
+</div>
+</div>
+<!-- Amla -->
+<div class="flex flex-col md:flex-row bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 reveal active">
+<div class="md:w-1/2 overflow-hidden">
+<img alt="Amla Powder" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" data-alt="A sophisticated presentation of fine Amla berry powder in a wooden-capped glass jar. The jar rests on a rough-hewn stone block, flanked by dried Indian gooseberries. The lighting creates a serene, earthy mood using a palette of soft tans and warm wood tones, reflecting a pure and grounded wellness philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOF_q-QQOTIYbRJAJFJtyszfNiKQI_-2VusLqFxbUxhzivtRZZ7T6DNxD73NMmn6meuUBIbhcysitfbDpgg3STFhP3AV7VHMYdPlimSq7mQoO5vUygT5hSs8iSUSdHVwKcoXIGvVQur3PQLYTaPMmPadDc4YxyKQv6w9NqUM2rUclyTA6ttNV-a4OhpKQ3CuYYZZnJZO1XaG6-m1Gq_wt6GNE6jHbv_fdn0vTfDCSrTe6ovgwxwmGVFsRB4hPlcVapWrSBSgLMQ">
+</div>
+<div class="md:w-1/2 p-10 flex flex-col justify-center">
+<span class="font-label-caps text-xs text-primary/50 uppercase mb-2">Vitamin C Boost</span>
+<h3 class="font-headline-lg text-primary mb-4">Amla Powder</h3>
+<p class="text-on-surface-variant mb-6">Rich source of Vitamin C. A natural wellness supplement that strengthens immunity from within.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Skin &amp; Hair Health</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary scale-75">check_circle</span> Powerful Bioflavonoids</li>
+</ul>
+<button class="w-fit border-b-2 border-primary text-primary font-bold py-1 hover:pb-2 transition-all">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="bg-primary text-white py-section-gap overflow-hidden relative" id="certifications">
+<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container/30 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-10">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile">Quality You Can Trust</h2>
+<p class="mt-4 text-white/60">Meeting the highest global standards for safety and purity.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10 text-center flex flex-col items-center reveal active">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">verified_user</span>
+<h4 class="font-bold mb-2">Quality Tested</h4>
+<p class="text-xs text-white/50">FSSAI Compliant</p>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10 text-center flex flex-col items-center reveal active" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">biotech</span>
+<h4 class="font-bold mb-2">Lab Verified</h4>
+<p class="text-xs text-white/50">Batch Certification</p>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10 text-center flex flex-col items-center reveal active" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">eco</span>
+<h4 class="font-bold mb-2">Organic Standards</h4>
+<p class="text-xs text-white/50">Non-GMO Certified</p>
+</div>
+<div class="bg-white/5 backdrop-blur-md p-8 rounded-xl border border-white/10 text-center flex flex-col items-center reveal active" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary-fixed">security</span>
+<h4 class="font-bold mb-2">Safety Assured</h4>
+<p class="text-xs text-white/50">Test Reports Available</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Statistics -->
+<section class="py-24 bg-surface-container-highest">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+<div class="reveal active">
+<div class="font-display-lg text-display-lg-mobile text-primary mb-2">10k+</div>
+<p class="font-label-caps text-on-surface-variant">Products Delivered</p>
+</div>
+<div class="reveal active" style="transition-delay: 100ms;">
+<div class="font-display-lg text-display-lg-mobile text-primary mb-2">5k+</div>
+<p class="font-label-caps text-on-surface-variant">Happy Customers</p>
+</div>
+<div class="reveal active" style="transition-delay: 200ms;">
+<div class="font-display-lg text-display-lg-mobile text-primary mb-2">100%</div>
+<p class="font-label-caps text-on-surface-variant">Quality Checks</p>
+</div>
+<div class="reveal active" style="transition-delay: 300ms;">
+<div class="font-display-lg text-display-lg-mobile text-primary mb-2">10+</div>
+<p class="font-label-caps text-on-surface-variant">Years of Trust</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="contact">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg-mobile text-primary">Get In Touch</h2>
+<p class="text-on-surface-variant mt-4">We'd love to hear from you and answer any questions.</p>
+</div>
+<div class="grid lg:grid-cols-2 gap-16 items-start">
+<div class="bg-white p-10 rounded-2xl shadow-sm reveal active">
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-semibold mb-2">Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container p-4" placeholder="Your full name" type="text">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container p-4" placeholder="Email address" type="email">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Phone</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container p-4" placeholder="+91 XXXXXXXXXX" type="tel">
+</div>
+<div>
+<label class="block text-sm font-semibold mb-2">Message</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg focus:ring-2 focus:ring-primary-container p-4" placeholder="How can we help?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-bold hover:bg-primary/90 transition-all active:scale-[0.98]" type="submit">Send Message</button>
+</form>
+</div>
+<div class="space-y-12 reveal active">
+<div class="grid gap-8">
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">location_on</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Visit Us</h4>
+<p class="text-on-surface-variant">Da Sabarr HQ, Wellness Estate,<br>Global City Center, 560001</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">mail</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Email Us</h4>
+<p class="text-on-surface-variant">info@dasabarr.com</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">call</span>
+</div>
+<div>
+<h4 class="font-bold text-lg mb-1">Call Us</h4>
+<p class="text-on-surface-variant">+91 98765 43210</p>
+</div>
+</div>
+</div>
+<div class="rounded-2xl overflow-hidden h-64 shadow-inner bg-surface-container relative">
+<!-- Placeholder for Map -->
+<div class="absolute inset-0 flex items-center justify-center text-on-surface-variant/40 flex-col">
+<span class="material-symbols-outlined text-4xl mb-2">map</span>
+<p class="text-sm font-medium">Interactive Map Placeholder</p>
+</div>
+<div class="w-full h-full opacity-30 grayscale contrast-125" data-location="Global City Center">
+<!-- Dynamic map would load here -->
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-tertiary dark:bg-tertiary-container text-on-tertiary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Da Sabarr Logo" class="h-8 brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZgCM2RJFbGZyW_MmlPX99y0XPI4MJXPNg8SZz4MKBRQubTUfT5h47PGj-B5k4rwe5mCRZODotGdOvjgFYc8Ao7FqKb9p2SNuhg8UYbOf25mMhvkkdwI8vdwC1QNwYc6qYnB8prUDUDrQIyRTGsSMU-46LtFnWZsVfkK89V5SohxstZJQ2sLjJpuqmRSY4eWPyqYgk0i0cBSqQ7B6TxyAnl59RJhpMPVGvpb-2WMv_e-wQ3_d_bNjBSuiuGDx5lRKeXdxEnQzzk-ff">
+<span class="font-display-lg text-headline-md text-on-tertiary">Da Sabarr</span>
+</div>
+<p class="text-on-tertiary/70 text-sm leading-relaxed mb-8">
+                    Rooted in Nature, Crafted for Wellness. Bringing indigenous West African wisdom to the global stage.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg mb-2">Quick Links</h4>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#home">Home</a>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#about">About</a>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#products">Products</a>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#certifications">Certifications</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg mb-2">Support</h4>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#contact">Contact</a>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-tertiary/70 hover:text-on-tertiary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-lg mb-2">Newsletter</h4>
+<p class="text-on-tertiary/70 text-sm mb-4">Stay updated with our latest organic finds and wellness tips.</p>
+<div class="flex">
+<input class="bg-white/10 border-none rounded-l-lg p-3 w-full text-white placeholder:text-white/40 focus:ring-1 focus:ring-primary-fixed" placeholder="Email" type="email">
+<button class="bg-primary-fixed text-primary px-4 rounded-r-lg font-bold active:scale-95 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-white/5 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center text-on-tertiary/50 text-xs">
+            © 2024 Da Sabarr. Rooted in Nature, Crafted for Wellness.
+        </div>
+</footer>
+<script>
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial check
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        menuBtn.addEventListener('click', () => {
+            // Simple alert for prototype, in real app this would toggle a sidebar
+            alert('Mobile navigation would expand here.');
+        });
+
+        // Smooth active state for nav links based on scroll position
+        const navLinks = document.querySelectorAll('nav div a');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 100)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.add('text-on-surface-variant');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.remove('text-on-surface-variant');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

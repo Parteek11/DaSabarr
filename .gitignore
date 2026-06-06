@@ -33,4 +33,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# stitch (optional — keep .stitch/DESIGN.md tracked)
+# .stitch/designs/
