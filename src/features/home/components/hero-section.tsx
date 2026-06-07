@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const HERO_IMAGE = "/images/og-default.jpg";
+const HERO_IMAGE = "/images/og-default.png";
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden pt-20">
+    <section className="relative flex min-h-screen items-end overflow-hidden pt-20 pb-24 md:pb-32">
       <div className="absolute inset-0 z-0">
         <Image
           src={HERO_IMAGE}
