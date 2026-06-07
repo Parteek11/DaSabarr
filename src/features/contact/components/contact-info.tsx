@@ -59,7 +59,7 @@ export function ContactInfo() {
       <div className="relative h-64 overflow-hidden rounded-2xl bg-surface-container shadow-inner">
         <div className="absolute inset-0 flex flex-col items-center justify-center text-on-surface-variant/40">
           <MapPin className="mb-2 h-10 w-10" />
-          <p className="text-sm font-medium">Global City Center, India</p>
+          <p className="text-sm font-medium">Lalru, Punjab, India</p>
         </div>
       </div>
     </div>

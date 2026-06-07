@@ -7,19 +7,19 @@ export const siteConfig = {
   ogImage: "/images/og-default.jpg",
   locale: "en_IN",
   contact: {
-    email: "info@dasabarr.com",
-    phone: "+91 98765 43210",
+    email: "info@dasabrr.com",
+    phone: "+91 95925 05572",
     address: {
-      street: "Da Sabarr HQ, Wellness Estate",
-      city: "Global City Center",
-      postalCode: "560001",
+      street: "Da Sabarr, Lalru, Derabassi, Punjab 140501",
+      city: "Lalru",
+      postalCode: "140501",
       country: "India",
     },
   },
   social: {
-    instagram: "https://instagram.com/dasabarr",
-    facebook: "https://facebook.com/dasabarr",
-    linkedin: "https://linkedin.com/company/dasabarr",
+    instagram: "https://instagram.com/das_sabarr",
+    facebook: "https://facebook.com/das_sabarr",
+    // linkedin: "https://linkedin.com/company/dasabarr",
   },
   company: {
     legalName: "Da Sabarr Organics Pvt. Ltd.",

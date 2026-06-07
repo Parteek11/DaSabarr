@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
       </section>
       <CertificationsPreview />
-      <StatsSection />
+      {/*<StatsSection />*/}
     </>
   );
 }

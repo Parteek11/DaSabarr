@@ -31,7 +31,7 @@ export function HeroSection() {
           </h1>
           <p className="text-body-lg mb-10 max-w-lg text-white/90">
             Premium organic and natural products crafted to support a healthier
-            lifestyle. Discover the raw purity of West African superfoods.
+            lifestyle. Discover the raw purity of five rivers land.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row">
             <Button

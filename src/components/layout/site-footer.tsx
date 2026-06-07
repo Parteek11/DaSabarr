@@ -22,8 +22,7 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mb-8 text-sm leading-relaxed text-on-tertiary/70">
-            Rooted in Nature, Crafted for Wellness. Bringing indigenous West
-            African wisdom to the global stage.
+            Rooted in Nature, Crafted for Wellness. Bringing indigenous wisdom to the global stage from the land of five rivers.
           </p>
           <div className="flex gap-4">
             <a

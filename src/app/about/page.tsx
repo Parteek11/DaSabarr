@@ -10,7 +10,7 @@ import { WhyChooseUs } from "@/features/home/components/why-choose-us";
 export const metadata: Metadata = createPageMetadata({
   title: "About Us | Da Sabarr",
   description:
-    "Learn about Da Sabarr's mission to bring indigenous West African wellness wisdom to the global stage through premium organic superfoods.",
+    "Learn about Da Sabarr's mission to bring wellness wisdom from the soil of Punjab to the global stage through premium organic superfoods.",
   path: "/about",
 });
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Our Story"
             title="About Da Sabarr"
-            description="Bridging indigenous West African wisdom with contemporary global wellness."
+            description="Bridging wisdom from the soil of Punjab with contemporary global wellness."
             align="left"
           />
         </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
                 superfoods so powerful.
               </p>
               <p>
-                From the fertile soils of West Africa to your daily wellness routine,
+                From the fertile soils of Punjab to your daily wellness routine,
                 we ensure that every step of our supply chain reflects our values
                 of integrity and respect for both people and planet.
               </p>
