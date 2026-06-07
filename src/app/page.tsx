@@ -15,8 +15,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <AboutPreview />
-      <WhyChooseUs />
       <section className="section-gap container-site" id="products">
         <RevealOnScroll>
           <SectionHeader
@@ -34,6 +32,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      <AboutPreview />
+      <WhyChooseUs />
       <CertificationsPreview />
       {/*<StatsSection />*/}
     </>
