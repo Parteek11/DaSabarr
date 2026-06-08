@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { OrganizationJsonLd } from "@/features/seo/components/json-ld";
 import { createPageMetadata } from "@/features/seo/lib/metadata";
 import { siteConfig } from "@/config/site";
+import { WhatsAppFloating } from "@/components/shared/whatsapp-floating";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,6 +38,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
+        <WhatsAppFloating />
       </body>
     </html>
   );

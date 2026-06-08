@@ -110,6 +110,7 @@ export const products: Product[] = [
     inventory: { status: "in_stock", totalStock: 750 },
     isFeatured: true,
     isPublished: true,
+    isComingSoon: true,
     createdAt: now,
     updatedAt: now,
   },

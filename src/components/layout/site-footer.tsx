@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Globe, Send, Share2 } from "lucide-react";
+import { Facebook, Instagram, Send } from "lucide-react";
 import { footerNavigation } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 
@@ -28,16 +28,16 @@ export function SiteFooter() {
             <a
               href={siteConfig.social.instagram}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-white/20"
-              aria-label="Website"
+              aria-label="Instagram"
             >
-              <Globe className="h-4 w-4" />
+              <Instagram className="h-4 w-4" />
             </a>
             <a
               href={siteConfig.social.facebook}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition-all hover:bg-white/20"
-              aria-label="Share"
+              aria-label="Facebook"
             >
-              <Share2 className="h-4 w-4" />
+              <Facebook className="h-4 w-4" />
             </a>
           </div>
         </div>

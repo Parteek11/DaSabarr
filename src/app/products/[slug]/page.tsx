@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
             />
           </div>
 
-          <div>
+          <div className="mt-8">
             <Badge className="mb-4">{product.tagline}</Badge>
             <h1 className="text-display-lg mb-6 text-primary">{product.name}</h1>
             <p className="text-body-lg mb-8 text-on-surface-variant">

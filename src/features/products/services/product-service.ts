@@ -48,5 +48,6 @@ function toSummary(product: Product): ProductSummary {
     benefits: product.benefits,
     images: product.images,
     isFeatured: product.isFeatured,
+    isComingSoon: product.isComingSoon,
   };
 }

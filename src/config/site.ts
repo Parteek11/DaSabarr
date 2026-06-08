@@ -7,22 +7,26 @@ export const siteConfig = {
   ogImage: "/images/og-default.jpg",
   locale: "en_IN",
   contact: {
-    email: "info@dasabrr.com",
+    email: "info@dasabarr.com",
     phone: "+91 95925 05572",
+    whatsapp: "+91 95925 05572",
     address: {
-      street: "Da Sabarr, Lalru, Derabassi, Punjab 140501",
+      street: "Lalru Mandi, Dharamgarh Road, Near Mukhija Palace",
       city: "Lalru",
+      tehsil:"Derabassi",
+      district: "S.A.S Nagar",
+      state:"Punjab",
       postalCode: "140501",
       country: "India",
     },
   },
   social: {
-    instagram: "https://instagram.com/das_sabarr",
-    facebook: "https://facebook.com/das_sabarr",
+    instagram: "https://instagram.com/da_sabarr",
+    facebook: "https://facebook.com/da_sabarr",
     // linkedin: "https://linkedin.com/company/dasabarr",
   },
   company: {
     legalName: "Da Sabarr Organics Pvt. Ltd.",
-    foundedYear: 2014,
+    foundedYear: 2026,
   },
 } as const;

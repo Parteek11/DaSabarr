@@ -23,18 +23,18 @@ export function ProductCard({
   index = 0,
 }: ProductCardProps) {
   if (variant === "grid") {
-    return (
-      <Link
-        href={`/products/${product.slug}`}
-        className="tonal-card group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl"
-      >
+    const cardContent = (
+      <>
         <div className="relative aspect-[4/3] overflow-hidden">
           <Image
             src={product.images.hero}
             alt={product.images.alt}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className="object-cover transition-transform duration-700 group-hover:scale-105"
+            className={cn(
+              "object-cover transition-transform duration-700",
+              !product.isComingSoon && "group-hover:scale-105"
+            )}
           />
         </div>
         <div className="flex flex-1 flex-col p-6">
@@ -45,10 +45,33 @@ export function ProductCard({
           <p className="mb-4 flex-1 text-sm text-on-surface-variant">
             {product.shortDescription}
           </p>
-          <span className="w-fit border-b-2 border-primary py-1 font-bold text-primary transition-all group-hover:pb-2">
-            Learn More
-          </span>
+          {product.isComingSoon ? (
+            <span className="w-fit rounded-full bg-surface-variant px-3 py-1 text-xs font-bold uppercase tracking-wider text-on-surface-variant">
+              Coming Soon
+            </span>
+          ) : (
+            <span className="w-fit border-b-2 border-primary py-1 font-bold text-primary transition-all group-hover:pb-2">
+              Learn More
+            </span>
+          )}
         </div>
+      </>
+    );
+
+    if (product.isComingSoon) {
+      return (
+        <div className="tonal-card flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm opacity-80 grayscale">
+          {cardContent}
+        </div>
+      );
+    }
+
+    return (
+      <Link
+        href={`/products/${product.slug}`}
+        className="tonal-card group flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl"
+      >
+        {cardContent}
       </Link>
     );
   }
@@ -56,17 +79,21 @@ export function ProductCard({
   return (
     <div
       className={cn(
-        "flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 hover:shadow-xl md:flex-row",
-        index % 2 === 1 && "md:flex-row-reverse"
+        "flex flex-col overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-500 md:flex-row",
+        index % 2 === 1 && "md:flex-row-reverse",
+        product.isComingSoon ? "opacity-80 grayscale" : "hover:shadow-xl group"
       )}
     >
-      <div className="relative min-h-[280px] overflow-hidden md:w-1/2 md:min-h-0">
+      <div className="relative min-h-[280px] overflow-hidden md:w-2/5 md:min-h-0">
         <Image
           src={product.images.hero}
           alt={product.images.alt}
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover transition-transform duration-700 hover:scale-105"
+          className={cn(
+            "object-cover transition-transform duration-700",
+            !product.isComingSoon && "hover:scale-105 group-hover:scale-105"
+          )}
         />
       </div>
       <div className="flex flex-col justify-center p-10 md:w-1/2">
@@ -83,12 +110,18 @@ export function ProductCard({
             </li>
           ))}
         </ul>
-        <Link
-          href={`/products/${product.slug}`}
-          className="w-fit border-b-2 border-primary py-1 font-bold text-primary transition-all hover:pb-2"
-        >
-          Learn More
-        </Link>
+        {product.isComingSoon ? (
+          <span className="w-fit rounded-full bg-surface-variant px-4 py-2 text-sm font-bold uppercase tracking-wider text-on-surface-variant">
+            Coming Soon
+          </span>
+        ) : (
+          <Link
+            href={`/products/${product.slug}`}
+            className="w-fit border-b-2 border-primary py-1 font-bold text-primary transition-all hover:pb-2"
+          >
+            Learn More
+          </Link>
+        )}
       </div>
     </div>
   );

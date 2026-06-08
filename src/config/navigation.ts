@@ -10,7 +10,6 @@ export const mainNavigation: NavItem[] = [
   { label: "Products", href: "/products" },
   { label: "Certifications", href: "/certifications" },
   { label: "Blog", href: "/blog" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export const footerNavigation = {

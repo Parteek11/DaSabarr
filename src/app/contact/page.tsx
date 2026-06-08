@@ -23,7 +23,7 @@ export default function ContactPage() {
         ]}
       />
 
-      <section className="bg-surface-container-low pt-32 pb-16">
+      <section className="bg-surface-container-low pt-32 pb-4">
         <div className="container-site">
           <SectionHeader
             title="Get In Touch"

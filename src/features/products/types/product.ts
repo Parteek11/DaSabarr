@@ -51,6 +51,7 @@ export type Product = {
   inventory?: Pick<ProductInventory, "status" | "totalStock">;
   isFeatured: boolean;
   isPublished: boolean;
+  isComingSoon?: boolean;
   createdAt: string;
   updatedAt: string;
 };
@@ -67,4 +68,5 @@ export type ProductSummary = Pick<
   | "benefits"
   | "images"
   | "isFeatured"
+  | "isComingSoon"
 >;
